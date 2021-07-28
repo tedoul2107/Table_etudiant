@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="620.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableView.TableViewController">
+    <stylesheets>
+        <URL value="@tableview.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="StudentTable" layoutX="15.0" layoutY="142.0" prefHeight="328.0" prefWidth="593.0">
+        <columns>
+          <TableColumn fx:id="idCol" maxWidth="70.0" prefWidth="56.0" style="-fx-alignment: center;" text="ID">
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="column-header" />
+                  <String fx:value="label" />
+               </styleClass></TableColumn>
+          <TableColumn fx:id="nameCol" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: center;" text="NAME">
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="column-header" />
+                  <String fx:value="label" />
+               </styleClass></TableColumn>
+            <TableColumn fx:id="birthCol" maxWidth="117.0" prefWidth="91.0" style="-fx-alignment: center;" text="BIRTH DATE">
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="column-header" />
+                  <String fx:value="label" />
+               </styleClass></TableColumn>
+            <TableColumn fx:id="addressCol" maxWidth="100.0" prefWidth="83.0" style="-fx-alignment: center;" text="ADDRESS">
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="column-header" />
+                  <String fx:value="label" />
+               </styleClass></TableColumn>
+            <TableColumn fx:id="emailCol" maxWidth="137.0" prefWidth="137.0" style="-fx-alignment: center;" text="EMAIL">
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="column-header" />
+                  <String fx:value="label" />
+               </styleClass></TableColumn>
+            <TableColumn fx:id="editCol" maxWidth="111.0" prefWidth="84.0" style="-fx-alignment: center;" text="EDIT">
+               <styleClass>
+                  <String fx:value="column-header-background" />
+                  <String fx:value="column-header" />
+                  <String fx:value="label" />
+               </styleClass></TableColumn>
+        </columns>
+         <styleClass>
+            <String fx:value="filler" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <Pane layoutX="1.0" layoutY="50.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" />
+      <Text layoutX="185.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students Details" wrappingWidth="250.13671875">
+         <font>
+            <Font name="Bauhaus 93" size="34.0" />
+         </font>
+      </Text>
+      <HBox layoutX="14.0" layoutY="57.0" prefHeight="75.0" prefWidth="234.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#getAddView" prefHeight="75.0" prefWidth="75.0" styleClass="btn">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../image/icons8_add_user_male_52px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#refreshTable" prefHeight="75.0" prefWidth="75.0" styleClass="btn">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0">
+                     <image>
+                        <Image url="@../image/icons8_refresh_80px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_print" mnemonicParsing="false" onAction="#Print" prefHeight="75.0" prefWidth="75.0" styleClass="btn">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../image/icons8_print_52px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="txt_search" alignment="CENTER" layoutX="290.0" layoutY="76.0" prefHeight="38.0" prefWidth="286.0" promptText="Search Name">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font></TextField>
+      <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="290.0" layoutY="76.0">
+         <image>
+            <Image url="@../image/icons8_search_26px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
